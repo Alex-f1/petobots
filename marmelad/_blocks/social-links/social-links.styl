@@ -1,0 +1,38 @@
+.social-links
+  &__items
+    display: flex
+    align-items: center
+
+  &__item
+    margin-right: 30px
+
+    &:last-child
+      margin-right: 0
+
+    a
+      width: 22px
+      height: 18px
+      color: #fff
+      text-decoration: none
+      position: relative
+      display: block
+
+      img
+        vertical-align: top
+        position: absolute
+        top: 0
+        left: 0
+        transition: opacity 0.3s, ease 0.3s
+
+        &._is-hover
+          opacity: 0
+          visibility: hidden
+
+      &:hover
+        img
+          opacity: 0
+          visibility: hidden
+
+          &._is-hover
+            opacity: 1
+            visibility: visible

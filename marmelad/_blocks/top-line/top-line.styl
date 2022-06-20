@@ -1,0 +1,70 @@
+.top-line
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 200px
+  z-index: 15
+  background: linear-gradient(180deg, #020202 0%, rgba(9, 9, 9, 0) 100%)
+
+  &__section
+    padding-top: 55px
+
+    @media (max-width: 1279px)
+      padding-top: 50px
+
+    @media (max-width: 767px)
+      padding-top: 25px
+
+  .logo
+    @media (max-width: 1023px)
+      margin-bottom: 40px
+
+  .main-menu
+    margin-left: auto
+    margin-right: 60px
+
+    @media (max-width: 1279px)
+      margin-right: 40px
+
+    @media (max-width: 1023px)
+      margin-left: 0
+      margin-right: 0
+
+    @media (max-width: 767px)
+      display: none
+
+  .social-links
+    margin-right: 30px
+
+    @media (max-width: 1023px)
+      display: none
+
+  .logo-company
+    @media (max-width: 1023px)
+      display: none
+
+  &__wrapper
+    display: flex
+    align-items: center
+
+    @media (max-width: 1023px)
+      flex-direction: column
+
+  &__button-burger
+    color: #fff
+    position: absolute
+    top: 30px
+    left: 20px
+    width: 18px
+    height: 13px
+    padding: 0
+    border: none
+    background-color: transparent
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+
+    @media (min-width: 768px)
+      display none

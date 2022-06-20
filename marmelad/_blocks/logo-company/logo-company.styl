@@ -1,0 +1,26 @@
+.logo-company
+  &__link
+    display: block
+    width: 80px
+    height: 50px
+    position: relative
+
+    img
+      vertical-align: top
+      position: absolute
+      top: 0
+      left: 0
+      transition: opacity 0.3s, ease 0.3s
+
+      &._is-hover
+        opacity: 0
+        visibility: hidden
+
+    &:hover
+      img
+        opacity: 0
+        visibility: hidden
+
+        &._is-hover
+          opacity: 1
+          visibility: visible

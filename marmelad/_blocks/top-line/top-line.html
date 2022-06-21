@@ -2,7 +2,9 @@
   <div elem="section">
     <div elem="inner" class="contain">
       <div elem="wrapper">
-        <button elem="button-burger">{{ _icon('burger-icon', { tag: 'i' }) }}</button>
+        <button elem="button-burger" class="js-button-burger">
+          {{ _icon('burger-icon', { tag: 'i' }) }}
+        </button>
         {% include "logo.html" %}
         {% include "main-menu.html" %}
         {% include "social-links.html" %}

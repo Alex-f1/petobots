@@ -25,6 +25,40 @@ html
   &__main
     flex: 1
 
+h2
+  font-size: 100px
+  color: #fff
+  font-family: $fonts.headings
+  font-weight: 400
+  line-height: 0.8
+  text-align: center
+  text-transform: uppercase
+  text-shadow: 1px 0px 0px #FA364D, -1px 0px 0px #2595FA
+  margin-top: 0
+  margin-bottom: 15px
+
+  @media (max-width: 1023px)
+    font-size: 56px
+
+  @media (max-width: 767px)
+    font-size: 50px
+
+h3
+  font-size: 36px
+  color: #fff
+  font-family: $fonts.headings
+  font-weight: 400
+  line-height: 0.7
+  text-transform: uppercase
+  margin-top: 0
+  margin-bottom: 20px
+
+  @media (max-width: 1023px)
+    font-size: 30px
+
+  @media (max-width: 767px)
+    font-size: 18px
+
 .contain
   max-width: 1240px + 10px + 10px
   width: 100%
@@ -45,6 +79,7 @@ html
   min-width: 200px
   padding: 10px 20px
   transition: background-color 0.3s, ease 0.3s
+  cursor: pointer
 
   @media (max-width: 1023px)
     height: 48px

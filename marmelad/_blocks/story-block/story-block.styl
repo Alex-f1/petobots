@@ -1,0 +1,345 @@
+.story-block
+  padding-top: 120px
+  position: relative
+
+  &:after
+    content: ''
+    width: 100%
+    height: 300px
+    position: absolute
+    left: 0
+    top: -120px
+    background: linear-gradient(180deg, rgba(4, 4, 4, 0) 0%, #040404 100%)
+
+  &__section
+    height: 100%
+    padding-bottom: 225px
+    position: relative
+
+    @media (max-width: 959px)
+      padding-bottom: 165px
+
+    @media (max-width: 639px)
+      padding-bottom: 85px
+
+    &:after
+      content: ''
+      width: 100%
+      height: 430px
+      position: absolute
+      left: 0
+      top: 0
+      background: linear-gradient(180deg, #040404 0%, rgba(4, 4, 4, 0) 100%)
+      z-index: 2
+
+  &__logo-bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-position: 50% 0
+    z-index: 1
+
+  &__inner
+    height: 100%
+
+  &__wrapper
+    max-width: 1080px
+    width: 100%
+    height: 100%
+    margin-right: auto
+    margin-left: auto
+    position: relative
+    z-index: 3
+
+    @media (max-width: 959px)
+      max-width: 620px
+
+  &__container
+    padding-bottom: 50px
+    padding-left: 20px
+
+  &__item
+    position: relative
+    padding-top: 280px
+
+    @media (max-width: 959px)
+      padding-top: 100px
+
+    &.swiper-slide-active
+      & ^[0]
+        &__img
+          opacity: 1
+          visibility: visible
+
+        &__body
+          &:before, &:after
+            @media (max-width: 639px)
+              display: block
+
+        &__content
+          @media (max-width: 639px)
+            display: block
+
+    &:nth-child(1)
+      & ^[0]
+        &__img
+          top: -80px
+          left: -95px
+
+          @media (max-width: 959px)
+            left: -75px
+
+        &__body
+          background: linear-gradient(224.24deg, #00F1E0 2.66%, #00F72F 117.9%)
+
+          &:before
+            background: linear-gradient(224.24deg, #00F1E0 2.66%, #00F72F 117.9%)
+
+          &:after
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(0, 13, 38, 0.8)
+            backdrop-filter: blur(15px)
+
+    &:nth-child(2)
+      & ^[0]
+        &__img
+          top: -75px
+          left: -130px
+
+          @media (max-width: 959px)
+            left: -75px
+
+        &__body
+          background: linear-gradient(224.24deg, #1FA1FF 2.66%, #0B65CE 117.9%)
+
+          &:before
+            background: linear-gradient(224.24deg, #1FA1FF 2.66%, #0B65CE 117.9%)
+
+          &:after
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(0, 13, 38, 0.8)
+
+    &:nth-child(3)
+      & ^[0]
+        &__img
+          top: -75px
+          left: -130px
+
+          @media (max-width: 959px)
+            left: -75px
+
+        &__body
+          background: linear-gradient(224.24deg, #FF5775 2.66%, #6F0518 117.9%)
+
+          &:before
+            background: linear-gradient(224.24deg, #FF5775 2.66%, #6F0518 117.9%)
+
+          &:after
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(0, 13, 38, 0.8)
+
+    &:nth-child(4)
+      & ^[0]
+        &__img
+          top: -40px
+          left: -90px
+
+          @media (max-width: 959px)
+            left: -65px
+
+        &__body
+          background: linear-gradient(224.24deg, #C957FF 2.66%, #27056F 117.9%)
+
+          &:before
+            background: linear-gradient(224.24deg, #C957FF 2.66%, #27056F 117.9%)
+
+          &:after
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(0, 13, 38, 0.8)
+
+  &__body
+    min-height: 465px
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    padding-right: 50px
+    padding-bottom: 50px
+
+    @media (max-width: 959px)
+      padding-top: 50px
+
+    @media (max-width: 639px)
+      padding-top: 120px
+      min-height: 475px
+      padding-left: 20px
+      background: none !important
+
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      right: -10px
+      clip-path: polygon(93% 0, 100% 10%, 100% 100%, 0 100%, 0 0)
+
+      @media (min-width: 640px)
+        display: none
+
+      @media (max-width: 639px)
+        display: none
+
+      @media (max-width: 414px)
+        clip-path: polygon(86% 0, 100% 10%, 100% 100%, 0 100%, 0 0)
+
+    &:after
+      content: ''
+      position: absolute
+      top: -20px
+      right: 20px
+      width: 100%
+      height: 100%
+      backdrop-filter: blur(15px)
+      clip-path: polygon(94% 0, 100% 13%, 100% 100%, 0 100%, 0 0)
+
+      @media (max-width: 959px)
+        clip-path: polygon(91% 0, 100% 13%, 100% 100%, 0 100%, 0 0)
+
+      @media (max-width: 639px)
+        top: -10px
+        right: 10px
+        clip-path: polygon(93% 0, 100% 10%, 100% 100%, 0 100%, 0 0)
+        display: none
+
+      @media (max-width: 414px)
+        clip-path: polygon(86% 0, 100% 10%, 100% 100%, 0 100%, 0 0)
+
+  &__img
+    max-width: 620px
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.3s, ease 0.3s
+
+    @media (max-width: 959px)
+      max-width: 305px
+      top: 35% !important
+      transform: translateY(-20%)
+
+    @media (max-width: 639px)
+      max-width: 160px
+      top: 0 !important
+      left: 50% !important
+      transform: translate(-65%, 0) !important
+
+    img
+      vertical-align: top
+
+  &__number-slides
+    font-size: 10px
+    font-weight: 400
+    line-height: 1
+    letter-spacing: 0.72em
+    text-transform: uppercase
+    position: absolute
+    top: 20px
+    right: 25px
+    transform: rotate(45deg)
+    z-index: 2
+
+    @media (max-width: 639px)
+      font-size: 8px
+      letter-spacing: 0.5em
+      top: 25px
+      right: 20px
+      transform: rotate(50deg)
+
+  &__content
+    max-width: 460px
+    width: 100%
+    margin-left: auto
+    position: relative
+    z-index: 2
+    margin-top: auto
+    margin-bottom: auto
+
+    @media (max-width: 959px)
+      margin-top: 0
+      margin-bottom: 0
+      max-width: 340px
+
+    @media (max-width: 639px)
+      max-width: 100%
+      display: none
+
+  &__name
+    margin-bottom: 35px
+
+    @media (max-width: 767px)
+      margin-bottom: 15px
+
+  &__text
+    p
+      font-size: 16px
+      font-weight: 500
+      line-height: 1.4
+      margin-top: 0
+      margin-bottom: 20px
+
+      @media (max-width: 767px)
+        font-size: 14px
+        margin-bottom: 15px
+
+      &:last-child
+        margin-bottom: 0
+
+  &__buttons
+    display: flex
+    align-items: center
+    position: absolute
+    bottom: 35px
+    right: 50px
+    z-index: 5
+
+    @media (max-width: 959px)
+      right: 50%
+      transform: translateX(50%)
+
+  &__button-nav
+    min-width: 220px
+    background: rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(30px)
+    position: static
+
+    @media (max-width: 639px)
+      min-width: 125px
+
+    &--prev
+      margin-right: 20px
+
+      &:before
+        content: ''
+        flex: 0 0 12px
+        width: 12px
+        max-width: 12px
+        height: 20px
+        margin-right: 25px
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='21' viewBox='0 0 12 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.248 1L2.24805 10.5L11.248 20' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+
+      &:after
+        display: none
+
+    &--next
+      &:after
+        content: ''
+        flex: 0 0 12px
+        width: 12px
+        max-width: 12px
+        height: 20px
+        margin-left: 25px
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='21' viewBox='0 0 12 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.248 1L2.24805 10.5L11.248 20' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+        transform: rotate(180deg)

@@ -3,6 +3,7 @@ function initStoryBlockSlider() {
     slidesPerView: 1,
     spaceBetween: 100,
     autoHeight: true,
+    loop: true,
     effect: "fade",
     navigation: {
       nextEl: ".story-block__buttons .swiper-button-next",

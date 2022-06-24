@@ -1,2 +1,39 @@
 .footer
-  flex none
+  flex: none
+
+  &__section
+    padding-top: 65px
+    padding-bottom: 65px
+
+    @media (max-width: 767px)
+      padding-top: 35px
+      padding-bottom: 35px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+
+    @media (max-width: 1279px)
+      justify-content: center
+
+    @media (max-width: 767px)
+      flex-direction: column
+      align-items: center
+
+  .main-menu
+    margin-right: 40px
+
+    @media (max-width: 767px)
+      margin-right: 0
+      margin-bottom: 20px
+
+    &__nav
+      ul
+        @media (max-width: 767px)
+          flex-direction: column
+          align-items: center
+
+        li
+          @media (max-width: 767px)
+            margin-right: 0
+            margin-bottom: 20px

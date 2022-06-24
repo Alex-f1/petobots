@@ -1,0 +1,58 @@
+.road-map
+  overflow: hidden
+  padding-top: 120px
+  height: 1140px
+  position: relative
+  &:after
+    content: ''
+    width: 100%
+    height: 410px
+    left: 0px
+    top: 0
+    position: absolute
+    background: linear-gradient(180deg, #040404 0%, rgba(4, 4, 4, 0) 100%)
+    z-index: 1
+
+  @media (max-width: 1279px)
+    height: 1610px
+
+  @media (max-width: 767px)
+    height: 950px
+
+  &__title
+    position: relative
+    z-index: 2
+
+  &__pic
+    width: 1920px
+    margin-right: auto
+    margin-left: auto
+    text-align: center
+    position: absolute
+    top: -50px
+    left: 50%
+    transform: translateX(-50%)
+
+    @media (max-width: 1279px)
+      width: 820px
+      top: 100px
+
+    @media (max-width: 767px)
+      width: 408px
+      top: 150px
+
+    img
+      vertical-align: top
+      display: none
+
+      &.roadmap-desctop
+        @media (min-width: 1280px)
+          display: block
+
+      &.roadmap-tablet
+        @media (min-width: 768px) and (max-width: 1279px)
+          display: block
+
+      &.roadmap-mobile
+        @media (min-width: 320px) and (max-width: 767px)
+          display: block

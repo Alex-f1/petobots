@@ -1,13 +1,29 @@
 .community-block
-  padding-top: 170px
+  padding-top: 100px
   position: relative
   z-index: 5
+  @media (max-width: 1279px)
+    padding-top 30px
+
+    // &:before
+    //   height 30px
+
+
+  // &:before
+  //   content ""
+  //   position absolute
+  //   top 0
+  //   left 0
+  //   right 0
+  //   height 100px
+  //   background linear-gradient(180deg, #090c10 0%, #000 100%)
 
   &__section
     background-repeat: no-repeat
     background-size: cover
     background-position: 50% 100%
     padding-bottom: 150px
+    padding-top 60px
 
   &__title
     margin-bottom: 90px

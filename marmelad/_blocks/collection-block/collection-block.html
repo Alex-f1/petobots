@@ -1,0 +1,144 @@
+<div block="collection-block" id="main_collection">
+	<div elem="inner">
+		<h2 elem="title" class="contain">MAIN COLLECTION</h2>
+		<div elem="categor">
+			<div elem="categor-inner" class="contain">
+				<ul elem="categor-list">
+					<li class="active">
+						<a href="#">microbots</a>
+					</li>
+					<li>
+						<a href="#">FLYING</a>
+					</li>
+					<li>
+						<a href="#">walking small</a>
+					</li>
+					<li>
+						<a href="#">walking medium</a>
+					</li>
+					<li>
+						<a href="#">walking large</a>
+					</li>
+					<li>
+						<a href="#">Mythical</a>
+					</li>
+				</ul>
+				<div elem="filter-box">
+					<ul elem="filter-list" class="active">
+						<li>
+							<a href="#" class="red" data-name="host">Host</a>
+						</li>
+						<li class="active">
+							<a href="#" class="blue" data-name="trigger">Trigger</a>
+						</li>
+						<li>
+							<a href="#" class="green" data-name="tactical">Tactical</a>
+						</li>
+					</ul>
+					<ul elem="filter-list">
+						<li>
+							<a href="#" class="red" data-name="host">Host</a>
+						</li>
+						<li class="active">
+							<a href="#" class="blue" data-name="trigger">Trigger</a>
+						</li>
+						<li>
+							<a href="#" class="green" data-name="tactical">Tactical</a>
+						</li>
+					</ul>
+					<ul elem="filter-list">
+						<li>
+							<a href="#" class="red" data-name="host">Host</a>
+						</li>
+						<li class="active">
+							<a href="#" class="blue" data-name="trigger">Trigger</a>
+						</li>
+						<li>
+							<a href="#" class="green" data-name="tactical">Tactical</a>
+						</li>
+					</ul>
+					<ul elem="filter-list">
+						<li>
+							<a href="#" class="red" data-name="host">Host</a>
+						</li>
+						<li class="active">
+							<a href="#" class="blue" data-name="trigger">Trigger</a>
+						</li>
+						<li>
+							<a href="#" class="green" data-name="tactical">Tactical</a>
+						</li>
+					</ul>
+					<ul elem="filter-list">
+						<li>
+							<a href="#" class="red" data-name="host">Host</a>
+						</li>
+						<li class="active">
+							<a href="#" class="blue" data-name="trigger">Trigger</a>
+						</li>
+						<li>
+							<a href="#" class="green" data-name="tactical">Tactical</a>
+						</li>
+					</ul>
+					<ul elem="filter-list" class="hide">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div elem="body-list" class="contain">
+			<div elem="body" class="active">
+				<div elem="list">
+					{% for item in microbots %}
+					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+					    	{% include "product-thumbs.html" %}
+					    </div>
+					{% endfor %}
+				</div>
+			</div>
+			<div elem="body">
+				<div elem="list">
+					{% for item in flying %}
+					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+					    	{% include "product-thumbs.html" %}
+					    </div>
+					{% endfor %}
+				</div>
+			</div>
+			<div elem="body">
+				<div elem="list">
+					{% for item in wsmall %}
+					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+					    	{% include "product-thumbs.html" %}
+					    </div>
+					{% endfor %}
+				</div>
+			</div>
+			<div elem="body">
+				<div elem="list">
+					{% for item in wmedium %}
+					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+					    	{% include "product-thumbs.html" %}
+					    </div>
+					{% endfor %}
+				</div>
+			</div>
+			<div elem="body">
+				<div elem="list">
+					{% for item in wlarge %}
+					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+					    	{% include "product-thumbs.html" %}
+					    </div>
+					{% endfor %}
+				</div>
+			</div>
+			<div elem="body">
+				<div elem="list">
+					{% for item in mythical %}
+					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+					    	{% include "product-thumbs.html" %}
+					    </div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- collection-block -->

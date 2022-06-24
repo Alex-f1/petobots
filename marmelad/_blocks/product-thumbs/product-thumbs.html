@@ -1,0 +1,40 @@
+<div block="product-thumbs">
+	<div elem="buy">
+		<a href="#">
+			buy
+		</a>
+	</div>
+	<div elem="front">
+		<div elem="image">
+			<picture>
+				{#<source type="image/webp" srcset="{{item.front}}.webp">#}
+				{% if item.jpg %}
+					 <source type="image/jpeg" srcset="{{item.img}}.jpg">
+					 <img src="{{item.img}}.jpg" loading="lazy" alt="">
+				    {% else %}
+					 <source type="image/jpeg" srcset="{{item.img}}.png">
+					 <img src="{{item.img}}.png" loading="lazy" alt="">
+
+				{% endif %}
+			</picture>
+		</div>
+		<div elem="hover">
+			<picture>
+				{#<source type="image/webp" srcset="{{item.front}}.webp">#}
+				 <source type="image/jpeg" srcset="{{item.imghover}}.png">
+				 <img src="{{item.imghover}}.png" loading="lazy" alt="">
+			</picture>
+		</div>
+		<button elem="description">description</button>
+	</div>
+	<div elem="back">
+		<div elem="imageback">
+			<picture>
+				{#<source type="image/webp" srcset="{{item.front}}.webp">#}
+				 <source type="image/jpeg" srcset="{{item.back}}.png">
+				 <img src="{{item.back}}.png" loading="lazy" alt="">
+			</picture>
+		</div>
+		<button elem="description">back</button>
+	</div>
+</div><!-- product-thumbs -->

@@ -2,23 +2,24 @@
 pageTitle: Главная
 bodyClasses: home
 layout: !!map
-  header: true
-  footer: true
-  left: false
-  right: false
+	header: true
+	footer: true
+	left: false
+	right: false
 = yaml =
 
 {% extends 'app.html' %}
 
 {% block main %}
 
-  {% include "first-screen.html" %}
+	{% include "first-screen.html" %}
 
-  {% include "story-block.html" %}
+	{% include "story-block.html" %}
+	{% include "collection-block.html" %}
 
-  {% include "community-block.html" %}
-  
-  {% include "economics-block.html" %}
+	{% include "community-block.html" %}
+	
+	{% include "economics-block.html" %}
 
   {% include "delivery-schedule.html" %}
 

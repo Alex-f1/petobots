@@ -1,0 +1,197 @@
+.product-thumbs
+  position relative
+
+  &:hover
+    z-index 4
+    & ^[0]
+      &__description,
+      &__buy,
+      &__hover
+        opacity 1
+        visibility visible
+
+      &__image
+        opacity 0
+        visibility hidden
+
+  &.flip
+    z-index 3
+    & ^[0]
+      &__front
+        transform rotateY(180deg)
+
+      &__back
+        transform rotateY(0)
+
+      &__description,
+      &__buy
+        opacity 1
+        visibility visible
+
+  &:before
+    content ""
+    display block
+    padding-top 162%
+
+  &__front
+    z-index 2
+
+  &__back
+    transform rotateY(-180deg)
+
+    & ^[0]
+      &__description
+        padding-left 80px
+
+  &__back,
+  &__front
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    backface-visibility hidden
+    transition 0.6s
+    transform-style preserve-3d
+    filter drop-shadow(0px 4.91558px 24.5779px rgba(0, 0, 0, 0.5))
+
+
+  &__imageback
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    transition all 0.3s ease
+    z-index 1
+
+    img
+      position absolute
+      left 0
+      right 0
+      top 0
+      bottom 0
+      width 100%
+      height 100%
+      object-fit contain
+
+  &__image
+    position absolute
+    left 50%
+    top 50%
+    width 90%
+    height 77%
+    transform translate(-50%, -50%)
+    transition all 0.3s ease
+
+    img
+      position absolute
+      left 0
+      right 0
+      top 0
+      bottom 0
+      width 100%
+      height 100%
+      object-fit contain
+
+  &__hover
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    opacity 0
+    visibility hidden
+    transition all 0.3s ease
+    z-index 1
+
+    img
+      position absolute
+      left 0
+      right 0
+      top 0
+      bottom 0
+      width 100%
+      height 100%
+      object-fit contain
+
+  &__buy
+    position absolute
+    left 10px
+    right 10px
+    top 100%
+    margin-top -35px
+    opacity 0
+    visibility hidden
+    transition all 0.3s ease
+
+    a
+      display block
+      text-decoration none
+      font-family 'Aura', sans-serif
+      font-size 24px
+      line-height 1
+      text-align center
+      text-transform uppercase
+      color #FFFFFF
+      padding-top 36px
+      height 80px
+      background url("data:image/svg+xml,%3Csvg width='316' height='80' viewBox='0 0 316 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_b_1200_326)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M315.47 25.9681C315.47 27.5594 314.837 29.0855 313.712 30.2107L301.521 42.4021C300.396 43.5273 298.87 44.1595 297.278 44.1595L265.343 44.1595C263.752 44.1595 262.225 44.7916 261.1 45.9168L228.774 78.2426C227.649 79.3678 226.123 79.9999 224.532 79.9999L91.4264 79.9999C89.8351 79.9999 88.3089 79.3678 87.1837 78.2426L54.8578 45.9166C53.7325 44.7914 52.2064 44.1592 50.6151 44.1592L18.6797 44.1592C17.0884 44.1592 15.5623 43.5271 14.4371 42.4019L2.49643 30.4612C1.37121 29.336 0.739074 27.8099 0.739074 26.2186L0.739074 6.73445C0.739075 3.42074 3.42537 0.734454 6.73908 0.734454L309.47 0.734454C312.783 0.734454 315.47 3.42074 315.47 6.73445V25.9681Z' fill='%23E88D36'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_b_1200_326' x='-5.4054' y='-5.4101' width='327.019' height='91.5546' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImage' stdDeviation='3.07224'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_1200_326'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_1200_326' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A") 0 0 no-repeat
+      background-size 100% 100%
+
+  &__description
+    position absolute
+    left 100%
+    padding 0
+    display inline-block
+    border none
+    box-shadow none
+    outline none
+    font-family 'Aura', sans-serif
+    font-size 18px
+    line-height 1
+    text-transform uppercase
+    color #FFFFFF
+    height 74px
+    width 260px
+    text-align left
+    padding-bottom 15px
+    padding-left 45px
+    background url("data:image/svg+xml,%3Csvg width='262' height='75' viewBox='0 0 262 75' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.16028 74.2134C2.84657 74.2134 0.16028 71.5271 0.16028 68.2134L0.160278 31.8705C0.160278 30.2792 0.79242 28.7531 1.91764 27.6278L27.0119 2.5336C28.1371 1.40838 29.6632 0.776237 31.2545 0.776237L175.458 0.77623C177.049 0.77623 178.576 1.40837 179.701 2.53359L204.376 27.2091C205.502 28.3344 207.028 28.9665 208.619 28.9665H252.526C254.117 28.9665 255.644 29.5986 256.769 30.7239L259.513 33.4677C260.638 34.5929 261.27 36.1191 261.27 37.7103V68.2134C261.27 71.5271 258.584 74.2134 255.27 74.2134L6.16028 74.2134Z' fill='%23767676'/%3E%3C/svg%3E%0A") 0 0 no-repeat
+    background-size contain
+    transform-origin 0 0
+    transform rotate(90deg) translate(70px, -40px)
+    cursor pointer
+    opacity 0
+    visibility hidden
+    transition all 0.3s ease
+
+  @media (max-width: 1279px)
+    &__buy
+      a
+        height 52px
+        font-size 16px
+        padding-top 30px
+
+    &__description
+      font-size 12px
+      width 172px
+      height 48px
+      padding-left 24px
+      padding-bottom 10px
+      transform rotate(90deg) translate(70px, -25px)
+
+    &__back
+      & ^[0]
+        &__description
+          padding-left 50px
+
+  @media (max-width: 639px)
+    &__buy
+      margin-top -20px
+      a
+        height 40px
+        font-size 11px
+        padding-top 20px
+    &__description
+      transform rotate(90deg) translate(15%, -25px)

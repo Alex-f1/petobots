@@ -222,13 +222,15 @@ module.exports = {
       imghover: 'img/catalog/flying/elem1/hover3',
       back: 'img/catalog/flying/elem1/back3',
       filter: 'tactical',
-      class: 'hide'
+      class: 'hide',
+      webp: true
     },
     {
       img: 'img/catalog/flying/elem2/default1',
       imghover: 'img/catalog/flying/elem2/hover1',
       back: 'img/catalog/flying/elem2/back1',
-      filter: 'trigger'
+      filter: 'trigger',
+      webp: true
 
     },
     {
@@ -236,20 +238,23 @@ module.exports = {
       imghover: 'img/catalog/flying/elem2/hover2',
       back: 'img/catalog/flying/elem2/back2',
       filter: 'host',
-      class: 'hide'
+      class: 'hide',
+      webp: true
     },
     {
       img: 'img/catalog/flying/elem2/default3',
       imghover: 'img/catalog/flying/elem2/hover3',
       back: 'img/catalog/flying/elem2/back3',
       filter: 'tactical',
-      class: 'hide'
+      class: 'hide',
+      webp: true
     },
     {
       img: 'img/catalog/flying/elem3/default1',
       imghover: 'img/catalog/flying/elem3/hover1',
       back: 'img/catalog/flying/elem3/back1',
-      filter: 'trigger'
+      filter: 'trigger',
+      webp: true
 
     },
     {
@@ -257,35 +262,39 @@ module.exports = {
       imghover: 'img/catalog/flying/elem3/hover2',
       back: 'img/catalog/flying/elem3/back2',
       filter: 'host',
-      class: 'hide'
+      class: 'hide',
+      webp: true
     },
     {
       img: 'img/catalog/flying/elem3/default3',
       imghover: 'img/catalog/flying/elem3/hover3',
       back: 'img/catalog/flying/elem3/back3',
       filter: 'tactical',
-      class: 'hide'
+      class: 'hide',
+      webp: true
     },
     {
       img: 'img/catalog/flying/elem4/default1',
       imghover: 'img/catalog/flying/elem4/hover1',
       back: 'img/catalog/flying/elem4/back1',
-      filter: 'trigger'
-
+      filter: 'trigger',
+      webp: true
     },
     {
       img: 'img/catalog/flying/elem4/default2',
       imghover: 'img/catalog/flying/elem4/hover2',
       back: 'img/catalog/flying/elem4/back2',
       filter: 'host',
-      class: 'hide'
+      class: 'hide',
+      webp: true
     },
     {
       img: 'img/catalog/flying/elem4/default3',
       imghover: 'img/catalog/flying/elem4/hover3',
       back: 'img/catalog/flying/elem4/back3',
       filter: 'tactical',
-      class: 'hide'
+      class: 'hide',
+      webp: true
     }
   ],
   mythic: [

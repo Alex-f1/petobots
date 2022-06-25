@@ -7,7 +7,9 @@
 	<div elem="front">
 		<div elem="image">
 			<picture>
-				{#<source type="image/webp" srcset="{{item.front}}.webp">#}
+				{% if item.webp %}
+					<source type="image/webp" srcset="{{item.img}}.webp">
+				{% endif %}
 				{% if item.jpg %}
 					 <source type="image/jpeg" srcset="{{item.img}}.jpg">
 					 <img src="{{item.img}}.jpg" loading="lazy" alt="">
@@ -20,7 +22,9 @@
 		</div>
 		<div elem="hover">
 			<picture>
-				{#<source type="image/webp" srcset="{{item.front}}.webp">#}
+				{% if item.webp %}
+					<source type="image/webp" srcset="{{item.imghover}}.webp">
+				{% endif %}
 				 <source type="image/jpeg" srcset="{{item.imghover}}.png">
 				 <img src="{{item.imghover}}.png" loading="lazy" alt="">
 			</picture>
@@ -30,7 +34,9 @@
 	<div elem="back">
 		<div elem="imageback">
 			<picture>
-				{#<source type="image/webp" srcset="{{item.front}}.webp">#}
+				{% if item.webp %}
+					<source type="image/webp" srcset="{{item.back}}.webp">
+				{% endif %}
 				 <source type="image/jpeg" srcset="{{item.back}}.png">
 				 <img src="{{item.back}}.png" loading="lazy" alt="">
 			</picture>

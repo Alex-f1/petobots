@@ -1,2 +1,17 @@
 .header
-  flex none
+  flex: none
+  position: relative
+
+  &:after
+    content: ''
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    height: 200px
+    z-index: 6
+    background: linear-gradient(180deg, #020202 0%, rgba(9, 9, 9, 0) 100%)
+    transition: height 0.3s, ease 0.3s
+
+    @media (max-width: 639px)
+      display: none

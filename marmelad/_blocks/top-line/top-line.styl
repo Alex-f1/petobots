@@ -3,15 +3,29 @@
   top: 0
   left: 0
   width: 100%
-  height: 200px
-  z-index: 15
-  background: linear-gradient(180deg, #020202 0%, rgba(9, 9, 9, 0) 100%)
+  z-index: 150
+  transition: height 0.3s, ease 0.3s
 
-  @media (max-width: 639px)
-    background: none
+  &._is-fixed
+    position: fixed
+    background: #1116254d
+    backdrop-filter: blur(25px)
+    border-bottom: 0.5px solid rgba(66, 81, 113, 0.342)
+
+    & ^[0]
+      &__section
+        padding-top: 20px
+        padding-bottom: 20px
+
+      &__button-burger
+        top: 25px
+
+  &._is-show-menu
+    backdrop-filter: none
 
   &__section
     padding-top: 55px
+    transition: padding 0.3s, ease 0.3s
 
     @media (max-width: 1279px)
       padding-top: 50px
@@ -50,7 +64,7 @@
       opacity: 0
       visibility: hidden
       transform: translateY(-50px)
-      transition: opacity .3s, transform .3s, ease .3s
+      transition: opacity 0.3s, transform 0.3s, ease 0.3s
 
     &._is-show
       opacity: 1

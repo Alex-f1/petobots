@@ -8,13 +8,13 @@
 		<div elem="image">
 			<picture>
 				{% if item.webp %}
-					<source type="image/webp" srcset="{{item.img}}.webp">
+					<source type="image/webp" srcset="{{item.img}}.webp, {{item.img2x}}.webp 2x">
 				{% endif %}
 				{% if item.jpg %}
 					 <source type="image/jpeg" srcset="{{item.img}}.jpg">
 					 <img src="{{item.img}}.jpg" loading="lazy" alt="">
 				    {% else %}
-					 <source type="image/jpeg" srcset="{{item.img}}.png">
+					 <source type="image/jpeg" srcset="{{item.img}}.png, {{item.img2x}}.png 2x">
 					 <img src="{{item.img}}.png" loading="lazy" alt="">
 
 				{% endif %}

@@ -87,56 +87,168 @@
 		<div elem="body-list" class="contain">
 			<div elem="body" class="active">
 				<div elem="list">
-					{% for item in microbots %}
-					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
-					    	{% include "product-thumbs.html" %}
-					    </div>
-					{% endfor %}
+					<div elem="group" data-type="host">
+						{% for item in microbots %}
+							{% if item.filter == 'host' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="trigger">
+						{% for item in microbots %}
+							{% if item.filter == 'trigger' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="tactical">
+						{% for item in microbots %}
+							{% if item.filter == 'tactical' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 			<div elem="body">
 				<div elem="list">
-					{% for item in flying %}
-					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
-					    	{% include "product-thumbs.html" %}
-					    </div>
-					{% endfor %}
+					<div elem="group" data-type="host">
+						{% for item in flying %}
+							{% if item.filter == 'host' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="trigger">
+						{% for item in flying %}
+							{% if item.filter == 'trigger' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="tactical">
+						{% for item in flying %}
+							{% if item.filter == 'tactical' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 			<div elem="body">
 				<div elem="list">
-					{% for item in wsmall %}
-					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
-					    	{% include "product-thumbs.html" %}
-					    </div>
-					{% endfor %}
+					<div elem="group" data-type="host">
+						{% for item in wsmall %}
+							{% if item.filter == 'host' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="trigger">
+						{% for item in wsmall %}
+							{% if item.filter == 'trigger' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="tactical">
+						{% for item in wsmall %}
+							{% if item.filter == 'tactical' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 			<div elem="body">
 				<div elem="list">
-					{% for item in wmedium %}
-					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
-					    	{% include "product-thumbs.html" %}
-					    </div>
-					{% endfor %}
+					<div elem="group" data-type="host">
+						{% for item in wmedium %}
+							{% if item.filter == 'host' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="trigger">
+						{% for item in wmedium %}
+							{% if item.filter == 'trigger' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="tactical">
+						{% for item in wmedium %}
+							{% if item.filter == 'tactical' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 			<div elem="body">
 				<div elem="list">
-					{% for item in wlarge %}
-					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
-					    	{% include "product-thumbs.html" %}
-					    </div>
-					{% endfor %}
+					<div elem="group" data-type="host">
+						{% for item in wlarge %}
+							{% if item.filter == 'host' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="trigger">
+						{% for item in wlarge %}
+							{% if item.filter == 'trigger' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div elem="group" data-type="tactical">
+						{% for item in wlarge %}
+							{% if item.filter == 'tactical' %}
+							    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+							    	{% include "product-thumbs.html" %}
+							    </div>
+							{% endif %}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 			<div elem="body">
 				<div elem="list">
-					{% for item in mythical %}
-					    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
-					    	{% include "product-thumbs.html" %}
-					    </div>
-					{% endfor %}
+					<div elem="group" data-type="tactical">
+						{% for item in mythical %}
+						    <div elem="item" data-filter="{{item.filter}}" class="{{item.class}}">
+						    	{% include "product-thumbs.html" %}
+						    </div>
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 		</div>

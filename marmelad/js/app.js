@@ -63,7 +63,7 @@ $(function () {
 
   fixedPanel();
 
-  var preloaderEl = $('#preloader');
+ /*  var preloaderEl = $('#preloader');
   preloaderEl.removeClass('visible');
   $(window).on('load', function () {
     setTimeout(function () {
@@ -71,5 +71,6 @@ $(function () {
       preloaderEl.addClass('hidden');
     }, 1500)
   });
+ */
 
 });

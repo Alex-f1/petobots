@@ -63,5 +63,13 @@ $(function () {
 
   fixedPanel();
 
+  var preloaderEl = $('#preloader');
+  preloaderEl.removeClass('visible');
+  $(window).on('load', function () {
+    setTimeout(function () {
+      $('html, body').addClass('_is-loaded');
+      preloaderEl.addClass('hidden');
+    }, 1500)
+  });
 
 });

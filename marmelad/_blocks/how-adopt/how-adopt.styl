@@ -73,11 +73,13 @@
       max-width: 360px
       height: 75px
       margin-right: 40px
-      background-image: url('../img/how-adopt-left-pic.png')
-      background-repeat: no-repeat
-      background-position: 0 0
-      background-size: contain
+      background-color: #1E1E1E
+      // background-image: url('../img/how-adopt-left-pic.png')
+      // background-repeat: no-repeat
+      // background-position: 0 0
+      // background-size: contain
       margin-left: -50px
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 86% 99%, 0 100%)
 
       @media (max-width: 1599px)
         margin-left: -175px
@@ -90,21 +92,25 @@
         margin-left: -105px
 
     &:after
-      flex: 0 0 645px
-      width: 645px
-      max-width: 645px
+      // flex: 0 0 645px
+      // width: 645px
+      max-width: 100%
+      flex: 1 1 auto
       height: 75px
       margin-left: 20px
-      background-image: url('../img/how-adopt-right-pic.png')
-      background-repeat: no-repeat
-      background-position: 0 0
-      background-size: contain
+      background-color: #1E1E1E
+      // background-image: url('../img/how-adopt-right-pic.png')
+      // background-repeat: no-repeat
+      // background-position: 0 0
+      // background-size: contain
       margin-right: -550px
+      clip-path: polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 55%)
+
+      @media (max-width: 1439px)
+        clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 55%)
+
 
       @media (max-width: 1279px)
-        flex: 0 0 400px
-        width: 400px
-        max-width: 400px
         height: 55px
         margin-left: 20px
         margin-right: -180px

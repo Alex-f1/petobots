@@ -63,14 +63,15 @@ $(function () {
 
   fixedPanel();
 
- /*  var preloaderEl = $('#preloader');
+  var preloaderEl = $('#preloader');
   preloaderEl.removeClass('visible');
   $(window).on('load', function () {
+    
     setTimeout(function () {
-      $('html, body').addClass('_is-loaded');
+      $('html, body').addClass('_is-loaded').css('overflow', 'auto');
       preloaderEl.addClass('hidden');
     }, 1500)
   });
- */
+
 
 });

@@ -63,15 +63,9 @@ $(function () {
 
   fixedPanel();
 
-  var preloaderEl = $('#preloader');
-  preloaderEl.removeClass('visible');
-  $(window).on('load', function () {
-    
-    setTimeout(function () {
-      $('html, body').addClass('_is-loaded').css('overflow', 'auto');
-      preloaderEl.addClass('hidden');
-    }, 1500)
-  });
-
+  setTimeout(function () {
+    $('body').addClass('_is-loaded');
+    $('#preloader').addClass('hidden');
+  }, 1500); //preloader
 
 });

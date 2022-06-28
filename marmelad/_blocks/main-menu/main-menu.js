@@ -6,15 +6,17 @@ $('.js-button-burger').on('click', function () {
 });
 
 function navToAnchor() {
-  $('.js-nav-to-anchor a').on('click', function (e) {
-    e.preventDefault();
-    var anchor = $(this);
-    $('.main-menu').removeClass('_is-show');
-    $('.js-top-line').removeClass('_is-show-menu');
-    $('html, body').stop().animate({
-      scrollTop: $(anchor.attr('href')).offset().top
-    }, 1000);
-    return false;
+  $('.js-nav-to-anchor').each(function() {
+    $(this).find('a').on('click', function (e) {
+      e.preventDefault();
+      var anchor = $(this);
+      $('.main-menu').removeClass('_is-show');
+      $('.js-top-line').removeClass('_is-show-menu');
+      $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top
+      }, 1000);
+      return false;
+    });
   });
 }
 

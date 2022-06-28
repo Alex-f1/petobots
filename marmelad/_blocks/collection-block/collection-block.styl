@@ -35,6 +35,9 @@
       flex: 0 0 174px
       margin: 0 5px
 
+      &.clone
+        display none
+
       &.active
         a
           background: #2595FA
@@ -48,6 +51,7 @@
           a
             clip-path: polygon(90% 0, 100% 30%, 100% 100%, 0 100%, 0 0)
 
+        &:nth-child(2),
         &:first-child
           a
             clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 30%)
@@ -95,6 +99,9 @@
       display: inline-block
       vertical-align: top
       margin: 0 15px
+
+      &.clone
+        display none
 
       &.active
         a
@@ -188,7 +195,7 @@
         background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.57024 5.31239L7.16167 1.56921C7.62083 0.905979 7.14614 0 6.33948 0H1.15662C0.349953 0 -0.124738 0.905978 0.334422 1.56921L2.92585 5.31239C3.32351 5.88678 4.17259 5.88678 4.57024 5.31239Z' fill='white'/%3E%3C/svg%3E%0A") 0 50% no-repeat
 
       &:not(.opened)
-        li:not(.active)
+        li:not(.clone)
           display: none
 
       &.opened
@@ -206,11 +213,18 @@
         width: 100%
         margin: -5px 0 0 -5px
 
-        &.active
+        &.clone
+          display block
           order: -1
 
           a
             clip-path: polygon(92% 0, 100% 30%, 100% 100%, 0 100%, 0 0)
+
+        &.active
+          &:not(.clone)
+            a
+              background #2b3f51
+              color #2595fa
 
         &:last-child
           a
@@ -251,7 +265,7 @@
         background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.57024 5.31239L7.16167 1.56921C7.62083 0.905979 7.14614 0 6.33948 0H1.15662C0.349953 0 -0.124738 0.905978 0.334422 1.56921L2.92585 5.31239C3.32351 5.88678 4.17259 5.88678 4.57024 5.31239Z' fill='white'/%3E%3C/svg%3E%0A") 0 50% no-repeat
 
       &:not(.opened)
-        li:not(.active)
+        li:not(.clone)
           display: none
 
       &.opened
@@ -267,7 +281,8 @@
         width: 100%
         margin: -5px 0 0 -5px
 
-        &.active
+        &.clone
+          display block
           order: -1
 
           a

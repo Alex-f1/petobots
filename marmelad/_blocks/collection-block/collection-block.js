@@ -1,4 +1,11 @@
-$('.collection-block__categor-list li a').on('click', function(e){
+$('.collection-block__categor-list').each(function(){
+  var parent = $(this),
+      liActive = parent.find('li.active').clone().addClass('clone');
+
+  liActive.prependTo(parent);
+});
+
+$(document).on('click', '.collection-block__categor-list li a', function(e){
   e.preventDefault();
   var $this = $(this),
       scrollTop = $(document).scrollTop();
@@ -10,15 +17,28 @@ $('.collection-block__categor-list li a').on('click', function(e){
     var index = $this.closest('li').index();
 
     $this.closest('ul').removeClass('opened');
+    $this.closest('ul').find('.clone').remove();
     $('.collection-block__body, .collection-block__filter-list').removeClass('active');
     $this.closest('ul').find('li').removeClass('active');
     $this.closest('li').addClass('active');
     $('.collection-block__body:eq('+ index +')').addClass('active');
     $('.collection-block__filter-list:eq('+ index +')').addClass('active');
+
+    var liActive = $this.closest('ul').find('li.active').clone().addClass('clone');
+
+    liActive.prependTo($this.closest('ul'));
   }
   $(document).scrollTop(scrollTop)
 });
-$('.collection-block__filter-list li a').on('click', function(e){
+
+$('.collection-block__filter-list').each(function(){
+  var parent = $(this),
+      liActive = parent.find('li.active').clone().addClass('clone');
+
+  liActive.prependTo(parent);
+});
+
+$(document).on('click', '.collection-block__filter-list li a', function(e){
   e.preventDefault();
   var $this = $(this);
 
@@ -36,6 +56,11 @@ $('.collection-block__filter-list li a').on('click', function(e){
       $this.closest('.collection-block__filter-list').find('li').removeClass('active');
       $this.closest('li').addClass('active');
       $('.collection-block__filter-list').removeClass('opened');
+      $this.closest('ul').find('.clone').remove();
+
+      var liActive = $this.closest('ul').find('li.active').clone().addClass('clone');
+
+      liActive.prependTo($this.closest('ul'));
   }
 });
 

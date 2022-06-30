@@ -14,7 +14,7 @@ $(document).on('click', '.collection-block__categor-list li a', function(e){
     $this.closest('ul').toggleClass('opened');
     return;
   } else {
-    var index = $this.closest('li').index();
+    var index = $this.closest('li').index() - 1;
 
     $this.closest('ul').removeClass('opened');
     $this.closest('ul').find('.clone').remove();
